@@ -1,5 +1,5 @@
 // Libs
-import Link from 'next/link'
+import { Link } from '@nextui-org/react'
 
 // Constants
 import { ROUTES } from '@/constants'
