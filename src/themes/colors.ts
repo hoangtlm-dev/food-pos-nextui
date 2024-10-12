@@ -1,11 +1,10 @@
-const systemColors = {
+export const systemColors = {
   primary: '#ea7c69',
-  'primary-blur': '#eb966a',
   white: '#ffffff',
   gray: '#898989'
 }
 
-const darkColors = {
+export const darkColors = {
   'dark-primary': '#252836',
   'dark-secondary': '#1f1d2b',
   'dark-line': '#393c49',
@@ -13,12 +12,12 @@ const darkColors = {
   'dark-input': '#2d303e'
 }
 
-const lightColors = {
+export const lightColors = {
   'light-primary': '#abbbc2',
   'light-secondary': '#e0e6e9'
 }
 
-const accentColors = {
+export const accentColors = {
   'accent-green': '#50d1aa',
   'accent-red': '#ff7ca3',
   'accent-orange': '#ffb572',
@@ -31,4 +30,10 @@ export const customColors = {
   ...darkColors,
   ...lightColors,
   ...accentColors
+}
+
+export const customDarkThemeColors = {
+  background: darkColors['dark-primary'],
+  foreground: systemColors.white,
+  content1: darkColors['dark-secondary']
 }
