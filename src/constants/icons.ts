@@ -1,8 +1,8 @@
 // Themes
-import { systemColors } from '@/themes'
+import { darkColors } from '@/themes'
 
 export const ICONS = {
-  DEFAULT_COLOR: systemColors.primary,
-  DEFAULT_WIDTH: 24,
-  DEFAULT_HEIGHT: 24
+  DEFAULT_COLOR: darkColors['dark-icon'],
+  DEFAULT_WIDTH: 20,
+  DEFAULT_HEIGHT: 20
 }

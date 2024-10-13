@@ -10,6 +10,7 @@ import { DashboardIcon, DiscountIcon, HomeIcon, MessageIcon, NotificationIcon, S
 
 // Styles
 import '@/app/globals.css'
+import LogoutIcon from '@/components/Icons/LogoutIcon'
 
 type StoryWrapperProps = IIconProps & {
   children: ReactElement
@@ -52,7 +53,8 @@ const icons = [
   <DashboardIcon key="dashboard" />,
   <MessageIcon key="message" />,
   <NotificationIcon key="notification" />,
-  <SettingIcon key="setting" />
+  <SettingIcon key="setting" />,
+  <LogoutIcon key="logout" />
 ]
 
 export const All: Story = {
@@ -103,5 +105,12 @@ export const Setting: Story = {
   ...template,
   args: {
     children: <SettingIcon />
+  }
+}
+
+export const Logout: Story = {
+  ...template,
+  args: {
+    children: <LogoutIcon />
   }
 }

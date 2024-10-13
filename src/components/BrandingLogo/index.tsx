@@ -5,10 +5,20 @@ import { Image, Link } from '@nextui-org/react'
 // Constants
 import { IMAGES, ROUTES } from '@/constants'
 
-const BrandingLogo = () => {
+interface IBrandingLogoProps {
+  width?: number
+  height?: number
+  src: string
+}
+
+const BrandingLogo = ({
+  width = IMAGES.DEFAULT_LOGO_WIDTH,
+  height = IMAGES.DEFAULT_LOGO_HEIGHT,
+  src
+}: IBrandingLogoProps) => {
   return (
     <Link href={ROUTES.HOME}>
-      <Image as={NextImage} width={40} height={40} src={IMAGES.LOGO} alt="Branding logo image" />
+      <Image as={NextImage} width={width} height={height} src={src} alt="Branding logo image" />
     </Link>
   )
 }
