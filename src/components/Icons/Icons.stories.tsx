@@ -6,7 +6,15 @@ import { Meta, StoryObj } from '@storybook/react'
 import { IIconProps } from '@/types'
 
 // Components
-import { DashboardIcon, DiscountIcon, HomeIcon, MessageIcon, NotificationIcon, SettingIcon } from '@/components'
+import {
+  DashboardIcon,
+  DiscountIcon,
+  HomeIcon,
+  MessageIcon,
+  NotificationIcon,
+  SearchIcon,
+  SettingIcon
+} from '@/components'
 
 // Styles
 import '@/app/globals.css'
@@ -54,7 +62,8 @@ const icons = [
   <MessageIcon key="message" />,
   <NotificationIcon key="notification" />,
   <SettingIcon key="setting" />,
-  <LogoutIcon key="logout" />
+  <LogoutIcon key="logout" />,
+  <SearchIcon key="search" />
 ]
 
 export const All: Story = {
@@ -112,5 +121,12 @@ export const Logout: Story = {
   ...template,
   args: {
     children: <LogoutIcon />
+  }
+}
+
+export const Search: Story = {
+  ...template,
+  args: {
+    children: <SearchIcon />
   }
 }
