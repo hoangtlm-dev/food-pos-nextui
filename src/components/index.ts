@@ -1,4 +1,6 @@
+export * from './common'
 export * from './Icons'
 export { default as PlaceholderPage } from './PlaceholderPage'
 export { default as BrandingLogo } from './BrandingLogo'
 export { default as SideNav } from './SideNav'
+export { default as Search } from './Search'
