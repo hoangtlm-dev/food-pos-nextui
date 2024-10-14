@@ -13,7 +13,7 @@ const PlaceholderPage = ({ pageName = 'Placeholder' }: IPlaceholderPageProps) =>
     <div className="container">
       <div className="flex flex-col items-center gap-2">
         <h2 className="text-lg font-semibold">{pageName}</h2>
-        <p className="text-md">🔥 The {pageName} page! Coming soon!</p>
+        <p className="text-center text-md">🔥 The {pageName} page! Coming soon!</p>
         <Link className="font-medium text-primary hover:opacity-80" href={ROUTES.HOME}>
           Back to home
         </Link>

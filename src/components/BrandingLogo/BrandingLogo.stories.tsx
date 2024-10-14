@@ -1,6 +1,9 @@
 // Libs
 import { Meta, StoryObj } from '@storybook/react'
 
+// Constants
+import { IMAGES } from '@/constants'
+
 // Components
 import { BrandingLogo } from '@/components'
 
@@ -14,4 +17,8 @@ export default meta
 
 type Story = StoryObj<typeof BrandingLogo>
 
-export const Default: Story = {}
+export const Default: Story = {
+  args: {
+    src: IMAGES.LOGO
+  }
+}

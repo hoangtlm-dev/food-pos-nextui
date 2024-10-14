@@ -1,5 +1,7 @@
 import type { Preview } from '@storybook/react'
+import { withThemeByClassName } from '@storybook/addon-themes'
 
+// Styles
 import '../src/app/globals.css'
 
 const preview: Preview = {
@@ -9,12 +11,21 @@ const preview: Preview = {
         color: /(background|color)$/i,
         date: /Date$/i
       },
-      layout: 'centered',
       nextjs: {
         appDirectory: true
       }
-    }
+    },
+    layout: 'centered'
   },
+  decorators: [
+    withThemeByClassName({
+      themes: {
+        light: '',
+        dark: 'dark'
+      },
+      defaultTheme: 'dark'
+    })
+  ],
   tags: ['autodocs']
 }
 

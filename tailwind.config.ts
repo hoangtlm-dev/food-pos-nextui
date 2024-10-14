@@ -3,7 +3,7 @@ import { nextui } from '@nextui-org/react'
 import type { Config } from 'tailwindcss'
 
 // Themes
-import { customColors, customContainer, customFontSizes, customRadiuses } from './src/themes'
+import { customColors, customContainer, customDarkThemeColors, customFontSizes, customRadiuses } from './src/themes'
 
 const config: Config = {
   content: ['./src/**/*.{js,ts,jsx,tsx,mdx}', './node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}'],
@@ -16,6 +16,14 @@ const config: Config = {
     }
   },
   darkMode: 'class',
-  plugins: [nextui()]
+  plugins: [
+    nextui({
+      themes: {
+        dark: {
+          colors: customDarkThemeColors
+        }
+      }
+    })
+  ]
 }
 export default config

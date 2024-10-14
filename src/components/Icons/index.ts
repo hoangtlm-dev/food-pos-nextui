@@ -1,0 +1,7 @@
+export { default as HomeIcon } from './HomeIcon'
+export { default as DiscountIcon } from './DiscountIcon'
+export { default as DashboardIcon } from './DashboardIcon'
+export { default as MessageIcon } from './MessageIcon'
+export { default as NotificationIcon } from './NotificationIcon'
+export { default as SettingIcon } from './SettingIcon'
+export { default as LogoutIcon } from './LogoutIcon'
