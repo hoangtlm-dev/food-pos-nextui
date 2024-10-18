@@ -9,11 +9,17 @@ import { systemColors } from '@/themes'
 
 interface ISearchProps {
   placeholder?: string
+  size?: 'sm' | 'md' | 'lg'
 }
 
-const Search = ({ placeholder = PLACEHOLDERS.DEFAULT_SEARCH_PLACEHOLDER }: ISearchProps) => {
+const Search = ({ placeholder = PLACEHOLDERS.DEFAULT_SEARCH_PLACEHOLDER, size = 'md' }: ISearchProps) => {
   return (
-    <Input type="text" placeholder={placeholder} startContent={<SearchIcon color={systemColors.white} />} size="lg" />
+    <Input
+      type="text"
+      placeholder={placeholder}
+      size={size}
+      startContent={<SearchIcon width={18} height={16} color={systemColors.white} />}
+    />
   )
 }
 
