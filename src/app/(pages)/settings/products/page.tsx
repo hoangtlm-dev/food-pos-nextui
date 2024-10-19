@@ -4,8 +4,8 @@ import { PLACEHOLDERS } from '@/constants'
 // Components
 import { PlaceholderPage } from '@/components'
 
-const Home = () => {
-  return <PlaceholderPage pageName={PLACEHOLDERS.HOME_PAGE} />
+const Products = () => {
+  return <PlaceholderPage pageName={PLACEHOLDERS.PRODUCTS_PAGE} />
 }
 
-export default Home
+export default Products

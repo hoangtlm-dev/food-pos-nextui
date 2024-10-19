@@ -1,9 +1,9 @@
 // Libs
 import NextImage from 'next/image'
-import { Image, Link } from '@nextui-org/react'
+import { Image } from '@nextui-org/react'
 
 // Constants
-import { IMAGES, ROUTES } from '@/constants'
+import { IMAGES } from '@/constants'
 
 interface IBrandingLogoProps {
   width?: number
@@ -16,11 +16,7 @@ const BrandingLogo = ({
   height = IMAGES.DEFAULT_LOGO_HEIGHT,
   src
 }: IBrandingLogoProps) => {
-  return (
-    <Link href={ROUTES.HOME}>
-      <Image as={NextImage} width={width} height={height} src={src} alt="Branding logo image" />
-    </Link>
-  )
+  return <Image as={NextImage} width={width} height={height} src={src} alt="Branding logo image" />
 }
 
 export default BrandingLogo

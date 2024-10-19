@@ -6,7 +6,7 @@ import { usePathname } from 'next/navigation'
 import { Button, Link, Navbar, NavbarBrand, NavbarMenu, NavbarMenuItem, NavbarMenuToggle } from '@nextui-org/react'
 
 // Constants
-import { IMAGES, ROUTES } from '@/constants'
+import { IMAGES, ROUTES, SETTINGS_ROUTES } from '@/constants'
 
 // Components
 import {
@@ -23,6 +23,9 @@ import {
 // Themes
 import { systemColors } from '@/themes'
 
+// Utils
+import { isSubRoute } from '@/utils'
+
 const links = [
   { name: 'Home', href: ROUTES.HOME, icon: HomeIcon },
   {
@@ -33,7 +36,7 @@ const links = [
   { name: 'Dashboard', href: ROUTES.DASHBOARD, icon: DashboardIcon },
   { name: 'Messages', href: ROUTES.MESSAGES, icon: MessageIcon },
   { name: 'Notification', href: ROUTES.NOTIFICATION, icon: NotificationIcon },
-  { name: 'Settings', href: ROUTES.SETTINGS, icon: SettingIcon }
+  { name: 'Settings', href: SETTINGS_ROUTES.PRODUCTS_MANAGEMENT, icon: SettingIcon }
 ]
 
 const SideNav = () => {
@@ -47,7 +50,7 @@ const SideNav = () => {
       <Navbar onMenuOpenChange={setIsMenuOpen} className="flex justify-between bg-content1 lg:hidden" isBlurred={false}>
         <NavbarMenuToggle aria-label={isMenuOpen ? 'Close menu' : 'Open menu'} className="lg:hidden" />
         <NavbarBrand>
-          <Link href={ROUTES.HOME} className="text-2xl font-bold text-foreground">
+          <Link href={ROUTES.HOME}>
             <BrandingLogo src={IMAGES.LOGO} />
           </Link>
         </NavbarBrand>
@@ -60,7 +63,8 @@ const SideNav = () => {
             const { name, href, icon } = link
             const LinkIcon = icon
 
-            const isActive = pathName === href
+            const isActive =
+              link.name === 'Settings' ? isSubRoute(pathName, Object.values(SETTINGS_ROUTES)) : pathName === link.href
 
             return (
               <NavbarMenuItem key={name}>
@@ -89,7 +93,8 @@ const SideNav = () => {
               const { name, href } = link
               const LinkIcon = link.icon
 
-              const isActive = pathName === href
+              const isActive =
+                link.name === 'Settings' ? isSubRoute(pathName, Object.values(SETTINGS_ROUTES)) : pathName === link.href
 
               return (
                 <li
