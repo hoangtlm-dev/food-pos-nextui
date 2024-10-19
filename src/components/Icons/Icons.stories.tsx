@@ -9,13 +9,17 @@ import { IIconProps } from '@/types'
 import {
   DashboardIcon,
   DiscountIcon,
-  EditIcon,
   HomeIcon,
   MessageIcon,
   NotificationIcon,
-  SearchIcon,
   SettingIcon,
-  LogoutIcon
+  LogoutIcon,
+  SearchIcon,
+  EditIcon,
+  HeartIcon,
+  RestaurantIcon,
+  SecurityIcon,
+  AboutIcon
 } from '@/components'
 
 // Styles
@@ -65,7 +69,11 @@ const icons = [
   <SettingIcon key="setting" />,
   <LogoutIcon key="logout" />,
   <SearchIcon key="search" />,
-  <EditIcon key="edit" />
+  <EditIcon key="edit" />,
+  <HeartIcon key="heart" />,
+  <RestaurantIcon key="restaurant" />,
+  <SecurityIcon key="security" />,
+  <AboutIcon key="about" />
 ]
 
 export const All: Story = {
@@ -137,5 +145,33 @@ export const Edit: Story = {
   ...template,
   args: {
     children: <EditIcon />
+  }
+}
+
+export const Heart: Story = {
+  ...template,
+  args: {
+    children: <HeartIcon />
+  }
+}
+
+export const Restaurant: Story = {
+  ...template,
+  args: {
+    children: <RestaurantIcon />
+  }
+}
+
+export const Security: Story = {
+  ...template,
+  args: {
+    children: <SecurityIcon />
+  }
+}
+
+export const About: Story = {
+  ...template,
+  args: {
+    children: <AboutIcon />
   }
 }
