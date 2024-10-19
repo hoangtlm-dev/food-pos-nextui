@@ -9,16 +9,17 @@ import { IIconProps } from '@/types'
 import {
   DashboardIcon,
   DiscountIcon,
+  EditIcon,
   HomeIcon,
   MessageIcon,
   NotificationIcon,
   SearchIcon,
-  SettingIcon
+  SettingIcon,
+  LogoutIcon
 } from '@/components'
 
 // Styles
 import '@/app/globals.css'
-import LogoutIcon from '@/components/Icons/LogoutIcon'
 
 type StoryWrapperProps = IIconProps & {
   children: ReactElement
@@ -63,7 +64,8 @@ const icons = [
   <NotificationIcon key="notification" />,
   <SettingIcon key="setting" />,
   <LogoutIcon key="logout" />,
-  <SearchIcon key="search" />
+  <SearchIcon key="search" />,
+  <EditIcon key="edit" />
 ]
 
 export const All: Story = {
@@ -128,5 +130,12 @@ export const Search: Story = {
   ...template,
   args: {
     children: <SearchIcon />
+  }
+}
+
+export const Edit: Story = {
+  ...template,
+  args: {
+    children: <EditIcon />
   }
 }
