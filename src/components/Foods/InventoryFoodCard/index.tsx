@@ -13,14 +13,14 @@ import { EditIcon } from '@/components'
 
 const InventoryFoodCard = ({ name, imageUrl, price, currencyUnit = '$', quantity }: Food) => {
   return (
-    <Card className="relative h-[320px] w-full min-w-[220px] flex-col items-center gap-4 rounded-sm border border-dark-line bg-content1 p-4 shadow-none">
+    <Card className="relative h-[320px] w-full flex-col items-center gap-4 rounded-sm border border-dark-line bg-content1 p-4 shadow-none">
       {/* Food's image */}
       <div className="h-32 w-32 overflow-hidden rounded-full">
         <Image as={NextImage} width={128} height={128} src={imageUrl} alt={name} />
       </div>
 
       {/*Food's Name */}
-      <h3 className="text-primaryFg line-clamp-2 min-h-5 text-wrap px-12 text-center text-xs font-medium">{name}</h3>
+      <h3 className="text-primaryFg line-clamp-2 min-h-5 text-wrap px-4 text-center text-xs font-medium">{name}</h3>
 
       {/* Price & quantity*/}
       <div className="flex items-center gap-2">

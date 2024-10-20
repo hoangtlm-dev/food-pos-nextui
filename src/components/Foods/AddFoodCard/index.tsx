@@ -11,7 +11,7 @@ const AddFoodCard = () => {
   return (
     <Card
       as={Button}
-      className="bg-secondaryBg h-[320px] w-full min-w-[220px] items-center justify-center gap-4 border border-dashed border-primary shadow-none hover:opacity-80"
+      className="bg-secondaryBg h-[320px] w-full items-center justify-center gap-4 border border-dashed border-primary shadow-none hover:opacity-80"
     >
       <PlusIcon color={systemColors.primary} />
       <span className="text-sm font-semibold text-primary">Add new dish</span>
