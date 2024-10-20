@@ -33,7 +33,7 @@ export default function RootLayout({
         <Providers>
           <div className="flex h-screen flex-col lg:flex-row">
             <SideNav />
-            <main className="flex-grow">{children}</main>
+            <main className="flex-grow lg:ml-24">{children}</main>
           </div>
         </Providers>
       </body>

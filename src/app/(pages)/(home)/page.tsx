@@ -7,7 +7,7 @@ import { CategoriesTab, CustomerFoodList, Search } from '@/components'
 const Home = () => {
   return (
     <div className="flex h-full">
-      <div className="grow p-6 lg:basis-4/5 lg:p-8">
+      <div className="grow p-6 lg:mr-[400px] lg:basis-4/5 lg:p-8">
         {/* Header & Search */}
         <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
           <div className="flex flex-col gap-2">
@@ -19,14 +19,17 @@ const Home = () => {
 
         {/* Food list */}
         <section className="mt-8">
-          <div>
+          <div className="mbb-4">
             <h2 className="text-md font-semibold">Choose Dishes</h2>
+            {/* TODO: Display OrderTypeDropdown */}
           </div>
           <CategoriesTab />
           <CustomerFoodList />
         </section>
       </div>
-      <div className="hidden h-full w-[400px] bg-content1 lg:flex">{/* TODO: Display dishes in order */}</div>
+      <div className="fixed bottom-0 right-0 top-0 hidden h-full w-[400px] bg-content1 lg:flex">
+        {/* TODO: Display dishes in order */}
+      </div>
     </div>
   )
 }
