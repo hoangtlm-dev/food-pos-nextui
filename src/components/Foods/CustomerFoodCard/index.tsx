@@ -7,7 +7,7 @@ import { Food } from '@/types'
 
 const CustomerFoodCard = ({ name, imageUrl, price, currencyUnit = '$', quantity }: Food) => {
   return (
-    <Card className="relative h-[260px] w-full min-w-[220px] overflow-visible rounded-sm bg-content1 p-4 shadow-none">
+    <Card className="relative h-[260px] w-full overflow-visible rounded-sm bg-content1 p-4 shadow-none">
       {/* Food's image */}
       <div className="absolute -top-10 left-1/2 z-20 h-32 w-32 -translate-x-1/2 overflow-hidden rounded-full">
         <Image as={NextImage} width={128} height={128} src={imageUrl} alt={name} />

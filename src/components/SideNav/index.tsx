@@ -47,7 +47,12 @@ const SideNav = () => {
   return (
     <>
       {/* Mobile navbar */}
-      <Navbar onMenuOpenChange={setIsMenuOpen} className="flex justify-between bg-content1 lg:hidden" isBlurred={false}>
+      <Navbar
+        isMenuOpen={isMenuOpen}
+        onMenuOpenChange={setIsMenuOpen}
+        className="flex justify-between bg-content1 lg:hidden"
+        isBlurred={false}
+      >
         <NavbarMenuToggle aria-label={isMenuOpen ? 'Close menu' : 'Open menu'} className="lg:hidden" />
         <NavbarBrand>
           <Link href={ROUTES.HOME}>
@@ -71,6 +76,7 @@ const SideNav = () => {
                 <Link
                   href={href}
                   className={`${isActive ? 'text-primary' : 'text-foreground-100'} flex items-center gap-4 font-medium`}
+                  onPress={() => setIsMenuOpen(false)}
                 >
                   <LinkIcon />
                   <span>{name}</span>
@@ -82,7 +88,7 @@ const SideNav = () => {
       </Navbar>
 
       {/* Desktop sidebar */}
-      <nav className="hidden h-screen w-24 flex-col items-center justify-between bg-content1 py-4 lg:flex">
+      <nav className="fixed bottom-0 left-0 top-0 hidden h-screen w-24 flex-col items-center justify-between bg-content1 py-4 lg:flex">
         <div className="flex flex-col gap-8">
           <Link href={ROUTES.HOME} className="text-2xl font-bold text-foreground">
             <BrandingLogo width={56} height={56} src={IMAGES.LOGO} />

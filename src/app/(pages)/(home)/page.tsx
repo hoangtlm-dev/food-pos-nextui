@@ -2,10 +2,36 @@
 import { PLACEHOLDERS } from '@/constants'
 
 // Components
-import { PlaceholderPage } from '@/components'
+import { CategoriesTab, CustomerFoodList, Search } from '@/components'
 
 const Home = () => {
-  return <PlaceholderPage pageName={PLACEHOLDERS.HOME_PAGE} />
+  return (
+    <div className="flex h-full">
+      <div className="grow p-6 lg:mr-[400px] lg:basis-4/5 lg:p-8">
+        {/* Header & Search */}
+        <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+          <div className="flex flex-col gap-2">
+            <h1 className="text-lg font-semibold">Jaegar Resto</h1>
+            <p className="text-sm text-light-secondary">Tuesday, 2 Feb 2021</p>
+          </div>
+          <Search placeholder={PLACEHOLDERS.SEARCH_FOOD} className="text-xs sm:w-72 lg:w-60 xl:w-80" />
+        </div>
+
+        {/* Food list */}
+        <section className="mt-8">
+          <div className="mbb-4">
+            <h2 className="text-md font-semibold">Choose Dishes</h2>
+            {/* TODO: Display OrderTypeDropdown */}
+          </div>
+          <CategoriesTab />
+          <CustomerFoodList />
+        </section>
+      </div>
+      <div className="fixed bottom-0 right-0 top-0 hidden h-full w-[400px] bg-content1 lg:flex">
+        {/* TODO: Display dishes in order */}
+      </div>
+    </div>
+  )
 }
 
 export default Home

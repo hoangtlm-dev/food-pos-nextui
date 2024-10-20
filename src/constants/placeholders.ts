@@ -13,5 +13,6 @@ export const PLACEHOLDERS = {
   ABOUT_US_PAGE: 'About Us',
 
   // Input
-  DEFAULT_SEARCH_PLACEHOLDER: 'Search ...'
+  DEFAULT_SEARCH_PLACEHOLDER: 'Search ...',
+  SEARCH_FOOD: 'Search for food, coffe, etc..'
 }

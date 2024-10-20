@@ -1,3 +1,5 @@
+'use client'
+
 // Libs
 import { Tab } from '@nextui-org/react'
 
