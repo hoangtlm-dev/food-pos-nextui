@@ -88,7 +88,7 @@ const SideNav = () => {
       </Navbar>
 
       {/* Desktop sidebar */}
-      <nav className="fixed bottom-0 left-0 top-0 hidden h-screen w-24 flex-col items-center justify-between bg-content1 py-4 lg:flex">
+      <nav className="hidden h-screen w-24 flex-col items-center justify-between bg-content1 py-4 lg:flex">
         <div className="flex flex-col gap-8">
           <Link href={ROUTES.HOME} className="text-2xl font-bold text-foreground">
             <BrandingLogo width={56} height={56} src={IMAGES.LOGO} />
