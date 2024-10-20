@@ -31,9 +31,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={barlow.className}>
         <Providers>
-          <div className="flex h-screen flex-col lg:flex-row">
+          <div className="flex h-screen flex-col lg:flex-row lg:overflow-hidden">
             <SideNav />
-            <main className="flex-grow lg:ml-24">{children}</main>
+            <main className="flex-grow">{children}</main>
           </div>
         </Providers>
       </body>
