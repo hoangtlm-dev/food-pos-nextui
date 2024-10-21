@@ -8,4 +8,6 @@ export type Food = {
   price: number
   currencyUnit?: CurrencyUnit
   quantity: number
+  categoryId: number
+  categoryName: string
 }

@@ -1,21 +1,35 @@
+'use client'
+
 // Libs
-import { Button, Card } from '@nextui-org/react'
+import { Button, useDisclosure } from '@nextui-org/react'
 
 // Themes
 import { systemColors } from '@/themes'
 
 // Components
-import { PlusIcon } from '@/components'
+import { MutationFoodForm, PlusIcon } from '@/components'
 
 const AddFoodCard = () => {
+  const {
+    isOpen: isMutationFormOpen,
+    onOpen: onMutationFormOpen,
+    onClose: onMutationFormClose
+  } = useDisclosure({
+    defaultOpen: false
+  })
+
   return (
-    <Card
-      as={Button}
-      className="bg-secondaryBg h-[320px] w-full items-center justify-center gap-4 border border-dashed border-primary shadow-none hover:opacity-80"
-    >
-      <PlusIcon color={systemColors.primary} />
-      <span className="text-sm font-semibold text-primary">Add new dish</span>
-    </Card>
+    <>
+      <Button
+        className="bg-secondaryBg h-[320px] w-full items-center justify-center gap-4 border border-dashed border-primary shadow-none hover:opacity-80"
+        onClick={onMutationFormOpen}
+      >
+        <PlusIcon color={systemColors.primary} />
+        <span className="text-sm font-semibold text-primary">Add new dish</span>
+      </Button>
+
+      <MutationFoodForm isOpen={isMutationFormOpen} onClose={onMutationFormClose} />
+    </>
   )
 }
 

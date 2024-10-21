@@ -9,7 +9,9 @@ export const MOCK_FOOD: Food = {
   name: 'Spicy seasoned seafood noodles',
   imageUrl: 'https://i.ibb.co/p676DzK/Images.png',
   price: 2.29,
-  quantity: 20
+  quantity: 20,
+  categoryId: 1,
+  categoryName: 'Hot dishes'
 }
 
 export const MOCK_FOODS = (length?: number): Food[] =>
