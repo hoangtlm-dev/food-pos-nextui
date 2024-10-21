@@ -1,4 +1,5 @@
-type CurrencyUnit = '€' | '$' | '¥' | '£'
+// Types
+import { CurrencyUnit } from '@/types'
 
 export type Food = {
   id: number
